@@ -1,0 +1,49 @@
+const User = require('../db/models/user');
+
+/**
+ * Create a user
+ * @param {name, email, password}
+ * @return {user}
+ */
+exports.createUser = async (req, res) => {
+    const { name, email, password } = req.body;
+    try {
+      const user = new User({
+        name,
+        email,
+        password,
+      });
+      const token = await user.generateAuthToken();
+    //   sendWelcomeEmail(user.email, user.name);
+      res.cookie('jwt', token, {
+        httpOnly: true,
+        sameSite: 'Strict',
+        secure: process.env.NODE_ENV !== 'production' ? false : true,
+      });
+      res.status(201).json(user);
+    } catch (e) {
+      res.status(400).json({ error: e.toString() });
+    }
+  };
+
+  /**
+ * @param {email, password}
+ * Login a user
+ * @return {user}
+ */
+exports.loginUser = async (req, res) => {
+    console.log(req.body);
+    const { email, password } = req.body;
+    try {
+      const user = await User.findByCredentials(email, password);
+      const token = await user.generateAuthToken();
+      res.cookie('jwt', token, {
+        httpOnly: true,
+        sameSite: 'Strict',
+        secure: process.env.NODE_ENV !== 'production' ? false : true,
+      });
+      res.json(user);
+    } catch (e) {
+      res.status(400).json({ error: e.toString() });
+    }
+  };

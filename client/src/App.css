@@ -36,20 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-.mainimagecontainer {
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  margin-top: 5vh;
-}
-
-.mainimage {
-  height: 25vh;
-  width: 120vh;
-  box-shadow: 0 0 8px 8px white inset;
-}
-
-.navcontainer {
-  background-color: black;
-}

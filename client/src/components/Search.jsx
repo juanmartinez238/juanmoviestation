@@ -6,7 +6,7 @@ const API_KEY = process.env.REACT_APP_MOVIE_API_KEY;
 
 const Search = () => {
     const [searchTerm, setSearchTerm] = useState('');
-    const SEARCH_API = `https://api.themoviedb.org/3/search/movie?&api_key=${API_KEY}&query=${searchTerm}`;
+    // const SEARCH_API = `https://api.themoviedb.org/3/search/movie?&api_key=${API_KEY}&query=${searchTerm}`;
 
 
     const handleSubmit = (e) => {

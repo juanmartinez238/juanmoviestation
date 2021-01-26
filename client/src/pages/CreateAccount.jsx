@@ -16,10 +16,12 @@ const CreateAccount = ({history}) => {
 
   const handleSignUp = (e) => {
     e.preventDefault();
+    console.log(formData)
     axios
       .post('/api/users', formData)
       .then((res) => {
         sessionStorage.setItem('user', res.data);
+        console.log('here is', res.data)
         setCurrentUser(res.data);
         history.push('/');
       })

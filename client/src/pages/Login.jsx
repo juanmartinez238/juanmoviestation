@@ -1,14 +1,14 @@
 import React, { useState, useContext } from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-// import { AppContext } from '../context/AppContext';
+import { AppContext } from '../context/AppContext';
 import axios from 'axios';
 // import swal from 'sweetalert';
 
 const Login = ({ history }) => {
   const [formData, setFormData] = useState(null);
 
-  // const { setCurrentUser } = useContext(AppContext);
+  const { setCurrentUser } = useContext(AppContext);
 
   const handleChange = e => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -18,7 +18,7 @@ const Login = ({ history }) => {
     e.preventDefault();
     try {
       const response = await axios.post('/api/users/login', formData);
-      // setCurrentUser(response.data);
+      setCurrentUser(response.data);
       console.log(response.data);
       sessionStorage.setItem('user', response.data);
       history.push('/');

@@ -1,14 +1,13 @@
 import React, { useState} from 'react';
+import SearchResults from '../components/SearchResults';
 
-const {REACT_APP_MOVIE_API_KEY} = process.env; 
 
 const API_KEY = process.env.REACT_APP_MOVIE_API_KEY;
 
-const Search = (props) => {
-    const {movies} = props;
+const Search = () => {
     const [search, setSearch] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
-    const SEARCH_API = `https://api.themoviedb.org/3/search/movie?&api_key=${API_KEY}&query=${searchTerm}`;
+    const SEARCH_API = `https://api.themoviedb.org/3/search/movie?&api_key=${API_KEY}&query=`;
 
 
     const handleSubmit = (e) => {
@@ -18,8 +17,8 @@ const Search = (props) => {
         if(searchTerm){
         fetch(SEARCH_API+searchTerm).then(res => res.json())
         .then(data => {
-            console.log(data)
-            // setMovies(data.results);
+            console.log(data.results)
+            setSearch(data.results);
         });
   
         setSearchTerm('');
@@ -34,7 +33,8 @@ const Search = (props) => {
     }
   
     return (
-        <form onSubmit={handleSubmit}>
+      <div>
+        <form onSubmit={handleSubmit} className='search-form'>
         <input 
         className="search" 
         type="text" 
@@ -43,6 +43,8 @@ const Search = (props) => {
         onChange={handleOnChange}
         />
         </form>
+        <SearchResults search={search}/>
+        </div>
     )
 }
 

@@ -1,15 +1,16 @@
 import React from 'react';
 import Main from '../components/Main';
+import Search from '../components/Search';
 import UserNavigation from '../components/UserNavigation';
 
-const UserHome = () => {
+const SearchPage = () => {
     return (
         <div>
             <Main/>
             <UserNavigation/>
-            <h1>Saved movies</h1>
+            <Search/>
         </div>
     )
 }
 
-export default UserHome;
+export default SearchPage;

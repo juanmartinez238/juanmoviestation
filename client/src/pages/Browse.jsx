@@ -1,15 +1,17 @@
-import React from 'react';
+import React from 'react'
+import MovieList from '../components/MovieList';
 import Main from '../components/Main';
 import UserNavigation from '../components/UserNavigation';
 
-const UserHome = () => {
+
+const Browse = () => {
     return (
         <div>
             <Main/>
             <UserNavigation/>
-            <h1>Saved movies</h1>
+            <MovieList/>
         </div>
     )
 }
 
-export default UserHome;
+export default Browse;

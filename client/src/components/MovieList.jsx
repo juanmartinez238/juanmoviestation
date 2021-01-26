@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import Movie from './Movie';
+import Search from './Search';
 const {REACT_APP_MOVIE_API_KEY} = process.env; 
 
 
@@ -21,6 +22,7 @@ const MovieList = () => {
     },[])   
     
     return (
+        
         <div className='movie-container'>
             {movies.length > 0 && movies.map(movie => 
             <Movie key={movie.id} {...movie} />

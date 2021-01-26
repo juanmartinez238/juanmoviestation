@@ -1,6 +1,6 @@
 import Container from 'react-bootstrap/esm/Container';
 import Nav from 'react-bootstrap/Nav';
-import Search from './Search';
+
 
 const Navigation = () => {
     return (
@@ -19,7 +19,6 @@ const Navigation = () => {
             <Nav.Link eventKey="link-3">Contact Me</Nav.Link>
           </Nav.Item>
         </Nav>
-        <Search />
       </Container>
     )
 }

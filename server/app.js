@@ -18,9 +18,9 @@ app.use('/api/users', openRoutes);
 
 app.use(cookieParser());
 
+// Serve any static files
 if (process.env.NODE_ENV === 'production') {
-  // Serve any static files
-  app.use(express.static(path.resolve(__dirname, '..', 'client', 'build')));
+  app.use(express.static(path.join(__dirname, '../client/build')));
 }
 
 if (process.env.NODE_ENV === 'production') {

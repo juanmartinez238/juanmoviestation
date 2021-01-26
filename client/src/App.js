@@ -3,11 +3,13 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import CreateAccount from './pages/CreateAccount';
+import { AppContextProvider } from '../src/context/AppContext';
 
 
 
 function App() {
   return (
+    <AppContextProvider>
         <BrowserRouter>
           <Switch>
             <Route exact path= '/' component= {Home} />
@@ -15,6 +17,7 @@ function App() {
             <Route exact path='/createaccount' component={CreateAccount} />
           </Switch>
         </BrowserRouter>
+    </AppContextProvider>
   );
 }
 

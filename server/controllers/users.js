@@ -20,6 +20,7 @@ exports.createUser = async (req, res) => {
         sameSite: 'Strict',
         secure: process.env.NODE_ENV !== 'production' ? false : true,
       });
+      user.save();
       res.status(201).json(user);
     } catch (e) {
       res.status(400).json({ error: e.toString() });

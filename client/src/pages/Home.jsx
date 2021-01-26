@@ -9,7 +9,6 @@ const Home = () => {
 
     return (
         <div >
-            <h1>Welcome to the Movie Station App</h1>
             <Main />
             <Navigation />
             <MovieList />

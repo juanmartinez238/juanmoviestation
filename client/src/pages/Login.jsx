@@ -21,7 +21,7 @@ const Login = ({ history }) => {
       setCurrentUser(response.data);
       console.log(response.data);
       sessionStorage.setItem('user', response.data);
-      history.push('/');
+      history.push('/userhome');
     } catch (error) {
       // swal(`Oops!`, 'Something went wrong.');
     }

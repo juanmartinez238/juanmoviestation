@@ -1,9 +1,10 @@
 require('./db/config');
 const express = require('express'),
 morgan = require('morgan'),
-openRoutes = require('./routes/open'),
 cookieParser = require('cookie-parser'),
-passport = require('./middleware/authentication'),
+openRoutes = require('./routes/open'),
+// passport = require('./middleware/authentication'),
+path = require('path'),
 app = express();
 
 //Parse incoming JSON into objects
@@ -16,6 +17,11 @@ app.use(morgan('dev'));
 app.use('/api/users', openRoutes);
 
 app.use(cookieParser());
+
+if (process.env.NODE_ENV === 'production') {
+  // Serve any static files
+  app.use(express.static(path.resolve(__dirname, '..', 'client', 'build')));
+}
 
 if (process.env.NODE_ENV === 'production') {
     // Handle React routing, return all requests to React app

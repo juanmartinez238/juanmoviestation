@@ -17,13 +17,16 @@
     "node": "^15.4.0",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
+    "serve": "^11.3.2",
     "validator": "^13.5.2"
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "serve -s build",
+    "build": "react-scripts build",
+    "server": "nodemon server.js",
     "client": "cd client && yarn run start",
     "dev": "concurrently --kill-others-on-fail \"yarn run server\" \"yarn run client\"",
-    "server": "nodemon server.js"
+    "heroku-postbuild": "cd client && yarn && yarn run build"
   },
   "devDependencies": {
     "dotenv": "^8.2.0",

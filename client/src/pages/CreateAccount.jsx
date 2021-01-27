@@ -23,7 +23,7 @@ const CreateAccount = ({history}) => {
         sessionStorage.setItem('user', res.data);
         console.log('here is', res.data)
         setCurrentUser(res.data);
-        history.push('/');
+        history.push('/userhome');
       })
       .catch((error) => {
         // swal('SignUp Error: ', error.toString());

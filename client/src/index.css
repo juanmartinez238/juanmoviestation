@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  background-color: #1c0b38;
+  /* background-color: #1c0b38; */
   color: white;
 }
 
@@ -54,7 +54,7 @@ code {
   background-color: transparent;
   border: 2px solid #53406d;
   border-radius: 5px;
-  color: white;
+  color: blue;
   /* font-family: "Lobster", cursive; */
   font-size: 1.2rem;
   /* padding: 0.5rem 1.5rem; */
@@ -64,6 +64,9 @@ code {
   outline: 0;
 }
 
+.search-form {
+  padding: 2rem;
+}
 .movie-container {
   display: flex;
   justify-content: center;

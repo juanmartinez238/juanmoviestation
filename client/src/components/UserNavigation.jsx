@@ -2,18 +2,18 @@ import Container from 'react-bootstrap/esm/Container';
 import Nav from 'react-bootstrap/Nav';
 
 
-const Navigation = () => {
+const UserNavigation = () => {
     return (
       <Container className='nav-container'>
           <Nav style={{marginTop: "10"}} variant="pills" className="justify-content-end" defaultActiveKey="/">
           <Nav.Item>
-            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/userhome">Home</Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link href="/login" eventKey="link-1">Log-in</Nav.Link>
+            <Nav.Link href="/browse" eventKey="link-1">Browse Movies</Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link href="/createaccount" eventKey="link-2">Create Account</Nav.Link>
+            <Nav.Link href="/search" eventKey="link-2">Search Movies</Nav.Link>
           </Nav.Item>
           <Nav.Item>
             <Nav.Link eventKey="link-3">Contact Me</Nav.Link>
@@ -23,6 +23,6 @@ const Navigation = () => {
     )
 }
 
-export default Navigation;
+export default UserNavigation;
 
 

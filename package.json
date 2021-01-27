@@ -22,7 +22,6 @@
   },
   "scripts": {
     "start": "serve -s build",
-    "build": "react-scripts build",
     "server": "nodemon server.js",
     "client": "cd client && yarn run start",
     "dev": "concurrently --kill-others-on-fail \"yarn run server\" \"yarn run client\"",

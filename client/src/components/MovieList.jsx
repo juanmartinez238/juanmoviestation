@@ -5,7 +5,7 @@ import axios from 'axios';
 const MovieList = () => {
     const [movies, setMovies] = useState([]);
 
-    useEffect(async () => {
+    useEffect( () => {
         const fetchData = async () => {
             const result = await axios.get(`/tmdb`);
             setMovies(result.data.results);

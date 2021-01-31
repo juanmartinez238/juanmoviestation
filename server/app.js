@@ -5,6 +5,7 @@ morgan = require('morgan'),
 cookieParser = require('cookie-parser'),
 openRoutes = require('./routes/open'),
 userRouter = require('./routes/secure/users'),
+movieRouter = require('./routes/secure/movies'),
 // passport = require('./middleware/authentication'),
 path = require('path'),
 app = express();
@@ -29,6 +30,7 @@ if (process.env.NODE_ENV === 'production') {
 //Authenticated routes
 app.use('/api/users', userRouter);
 
+app.use('/api/movies', movieRouter);
 
 if (process.env.NODE_ENV === 'production') {
     // Handle React routing, return all requests to React app

@@ -16,7 +16,7 @@ const UserNavigation = () => {
             <Nav.Link href="/search" eventKey="link-2">Search Movies</Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link eventKey="link-3">Contact Me</Nav.Link>
+            <Nav.Link href="/contact" eventKey="link-3">Contact Me</Nav.Link>
           </Nav.Item>
         </Nav>
       </Container>

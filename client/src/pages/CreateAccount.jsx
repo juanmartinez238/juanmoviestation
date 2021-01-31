@@ -32,7 +32,8 @@ const CreateAccount = ({history}) => {
 
     return (
       <Container className="container d-flex flex-column align-items-center justify-content-center fullscreen">
-      <h1>Juan's Movie Station</h1>
+      <h1 className="create-account-h1">Movie Station</h1>
+      <h3 className="create-account-h3">Create an Account</h3>
       <Form style={{ width: 300 }} onSubmit={handleSignUp}>
         <Form.Group>
           <Form.Label htmlFor="fullName">Full Name</Form.Label>

@@ -29,7 +29,7 @@ const Login = ({ history }) => {
 
   return (
     <Container className='login-container d-flex flex-column align-items-center justify-content-center fullscreen'>
-      <h1>Movie Station</h1>
+      <h1 className="login-h1">Movie Station</h1>
       <Form style={{ width: 300 }} onSubmit={handleLogin}>
         <Form.Group>
           <Form.Label htmlFor='email'>Email Address</Form.Label>
@@ -55,7 +55,7 @@ const Login = ({ history }) => {
           <Button type='submit'>Login</Button>
         </Form.Group>
       </Form>
-      <Link className='mt-4' to='/signup'>
+      <Link className='mt-4' to='/createaccount'>
         Need an account? Sign up.
       </Link>
       <Link className='mt-4' to='/forgotpassword'>

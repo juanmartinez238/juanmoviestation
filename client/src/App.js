@@ -8,6 +8,7 @@ import { AppContextProvider } from '../src/context/AppContext';
 import PrivateRoute from './components/PrivateRoute';
 import Browse from './pages/Browse';
 import SearchPage from './pages/SearchPage';
+import ContactPage from './pages/ContactPage';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <PrivateRoute exact path='/userhome' component={UserHome}/>
             <PrivateRoute exact path='/browse' component={Browse}/>
             <PrivateRoute exact path='/search' component={SearchPage}/>
+            <PrivateRoute exact path='/contact' component={ContactPage}/>
           </Switch>
         </BrowserRouter>
     </AppContextProvider>

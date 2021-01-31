@@ -1,17 +1,16 @@
 import React from 'react';
 import Main from '../components/Main';
-import TableList from '../components/TableList';
+import MyForm from '../components/MyForm';
 import UserNavigation from '../components/UserNavigation';
 
-const UserHome = () => {
+const ContactPage = () => {
     return (
         <div>
             <Main/>
             <UserNavigation/>
-            <h1 className='user-home-heading'>Saved movies</h1>
-            <TableList/>
+            <MyForm/>
         </div>
     )
 }
 
-export default UserHome;
+export default ContactPage;

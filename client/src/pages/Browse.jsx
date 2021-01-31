@@ -1,5 +1,5 @@
 import React from 'react'
-import MovieList from '../components/MovieList';
+import UserMovieList from '../components/UserMovieList';
 import Main from '../components/Main';
 import UserNavigation from '../components/UserNavigation';
 
@@ -9,7 +9,7 @@ const Browse = () => {
         <div>
             <Main/>
             <UserNavigation/>
-            <MovieList/>
+            <UserMovieList/>
         </div>
     )
 }

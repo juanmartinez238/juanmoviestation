@@ -136,3 +136,11 @@ header {
 .create-account-container {
   padding: 2rem;
 }
+
+.movie-button {
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  /* border-color: aqua; */
+  background-color: rgb(16, 16, 161);
+}

@@ -38,6 +38,7 @@ code {
 
 .image-title {
   background-color: black;
+  color: white;
   font-family: "Lobster", cursive;
   font-size: 28pt;
   position: absolute;
@@ -134,6 +135,18 @@ header {
 }
 
 .create-account-container {
+  padding: 2rem;
+}
+
+.create-account-h1 {
+  padding: 2rem;
+}
+
+.create-account-h3 {
+  padding: 2rem;
+}
+
+.login-h1 {
   padding: 2rem;
 }
 

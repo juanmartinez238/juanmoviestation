@@ -3,12 +3,9 @@ import SearchResults from '../components/SearchResults';
 import axios from 'axios';
 
 
-// const API_KEY = process.env.REACT_APP_MOVIE_API_KEY;
-
 const Search = () => {
     const [search, setSearch] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
-    // const SEARCH_API = `https://api.themoviedb.org/3/search/movie?&api_key=${API_KEY}&query=`;
 
     const searchOurTMDbAPI = async () => {
       try{
@@ -23,19 +20,6 @@ const Search = () => {
     const handleSubmit = (e) => {
       e.preventDefault();
       searchOurTMDbAPI();
-      // try{
-      //   if(searchTerm){
-      //   fetch(SEARCH_API+searchTerm).then(res => res.json())
-      //   .then(data => {
-      //       console.log(data.results)
-      //       setSearch(data.results);
-      //   });
-  
-      //   setSearchTerm('');
-      // };
-      // } catch (err) {
-      //   console.log(err)
-      // }
     };
   
     const handleOnChange = (e) => {

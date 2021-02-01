@@ -6,7 +6,7 @@ import UserNavigation from '../components/UserNavigation';
 
 const Browse = () => {
     return (
-        <div>
+        <div className="body">
             <Main/>
             <UserNavigation/>
             <UserMovieList/>

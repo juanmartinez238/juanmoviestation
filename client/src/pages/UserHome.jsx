@@ -5,7 +5,7 @@ import UserNavigation from '../components/UserNavigation';
 
 const UserHome = () => {
     return (
-        <div>
+        <div className="body">
             <Main/>
             <UserNavigation/>
             <h1 className='user-home-heading'>Saved movies</h1>

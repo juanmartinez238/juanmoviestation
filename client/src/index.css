@@ -4,13 +4,15 @@
   /* color: white; */
 }
 
-body {
+.body {
   margin: 0;
+  background-color: #1c0b38;
 }
 
 .root {
   display: flex;
   flex-direction: column;
+  background-color: #1c0b38;
 }
 
 p,
@@ -53,12 +55,16 @@ code {
 
 .search {
   background-color: transparent;
-  border: 2px solid #53406d;
+  border: 2px solid white;
   border-radius: 5px;
-  color: blue;
+  color: white;
   /* font-family: "Lobster", cursive; */
   font-size: 1.2rem;
   /* padding: 0.5rem 1.5rem; */
+}
+
+.search::placeholder {
+  color: white;
 }
 
 .search:focus {
@@ -67,8 +73,11 @@ code {
 
 .search-form {
   padding: 2rem;
+  display: flex;
+  justify-content: center;
 }
 .movie-container {
+  background-color: #1c0b38;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -89,6 +98,7 @@ code {
 }
 
 .movie-info {
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -165,13 +175,68 @@ header {
 }
 
 .user-home-heading {
+  color: white;
   display: flex;
   justify-content: center;
   padding: 2rem;
 }
 
-.contact-form {
+.contact-page {
+  margin-top: 3rem;
+}
+
+.contact-container {
   display: flex;
-  align-items: center;
+  justify-content: center;
+}
+
+.contact-form {
+  background-color: #49423f;
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+
+.contact-h1 {
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.contact-email-label {
+  color: white;
+  padding: 0.5rem;
+}
+
+.contact-email {
+  height: 2rem;
+  width: 55vw;
+}
+
+.contact-message-label {
+  color: white;
+  padding: 0.5rem;
+}
+
+.contact-message {
+  height: 4rem;
+  width: 55vw;
+}
+
+.contact-button {
+  margin-top: 2rem;
+  width: 55vw;
+  border-radius: 80px;
+  background-color: rgb(10, 10, 114);
+  color: white;
+}
+
+.contact-thanks {
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
 }

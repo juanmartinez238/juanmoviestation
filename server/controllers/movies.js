@@ -21,7 +21,8 @@ exports.fetchAllMovies = async (request, response) => {
 exports.createMovie = async (req, res) => {
   try {
     const movie = await new Movie({
-      ...req.body
+      ...req.body,
+      owner: req.user._id,
     });
     await movie.save();
     res.status(201).json(movie);
@@ -55,7 +56,8 @@ exports.getSpecificMovie = async (req, res) => {
 exports.deleteMovie = async (req, res) => {
   try {
     const movie = await Movie.findOneAndDelete({
-      _id: req.params.id
+      _id: req.params.id,
+      owner: req.user._id,
     });
     if (!movie) return res.status(404).json({ error: 'user not found' });
     res.json({ message: 'movie has been deleted' });

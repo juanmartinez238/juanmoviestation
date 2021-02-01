@@ -12,19 +12,21 @@ export default class MyForm extends React.Component {
   render() {
     const { status } = this.state;
     return (
+      <div className="contact-container">
       <form
         onSubmit={this.submitForm}
         action="https://formspree.io/f/xeqpdoeb"
         method="POST"
         className="contact-form"
       >
-        <label>Email:</label>
-        <input type="email" name="email" />
-        <label>Message:</label>
-        <input type="text" name="message" />
-        {status === "SUCCESS" ? <p>Thanks!</p> : <button>Submit</button>}
+        <label className="contact-email-label">Your Email:</label>
+        <input type="email" name="email" className="contact-email"/>
+        <label className="contact-message-label">Message:</label>
+        <input type="text" name="message" className="contact-message"/>
+        {status === "SUCCESS" ? <p className="contact-thanks">Thanks!</p> : <button className ="contact-button">Submit</button>}
         {status === "ERROR" && <p>Ooops! There was an error.</p>}
       </form>
+      </div>
     );
   }
 

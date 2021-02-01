@@ -16,7 +16,7 @@ const Navigation = () => {
             <Nav.Link href="/createaccount" eventKey="link-2">Create Account</Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link eventKey="link-3">Contact Me</Nav.Link>
+          <Nav.Link href="/contact" eventKey="link-3">Contact Me</Nav.Link>
           </Nav.Item>
         </Nav>
       </Container>

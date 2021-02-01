@@ -1,14 +1,14 @@
 import React from 'react';
-import Main from '../components/Main';
 import MyForm from '../components/MyForm';
 import UserNavigation from '../components/UserNavigation';
 
 const ContactPage = () => {
     return (
-        <div>
-            <Main/>
-            <UserNavigation/>
+        <div className="contact-page">
+         
+            <h1 className="contact-h1">Contact Me</h1>
             <MyForm/>
+            <UserNavigation/>
         </div>
     )
 }

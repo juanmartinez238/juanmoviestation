@@ -8,7 +8,7 @@ import MovieList from '../components/MovieList';
 const Home = () => {
 
     return (
-        <div >
+        <div className="body">
             <Main />
             <Navigation />
             <MovieList />

@@ -10,7 +10,7 @@ const UserNavigation = () => {
             <Nav.Link href="/userhome">Home</Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link href="/browse" eventKey="link-1">Browse Movies</Nav.Link>
+            <Nav.Link href="/browse" eventKey="link-1">Featured</Nav.Link>
           </Nav.Item>
           <Nav.Item>
             <Nav.Link href="/search" eventKey="link-2">Search Movies</Nav.Link>

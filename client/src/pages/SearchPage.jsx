@@ -5,7 +5,7 @@ import UserNavigation from '../components/UserNavigation';
 
 const SearchPage = () => {
     return (
-        <div>
+        <div className="body">
             <Main/>
             <UserNavigation/>
             <Search/>

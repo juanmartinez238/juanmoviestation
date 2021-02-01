@@ -8,7 +8,7 @@ const TableList = () => {
      
 
      useEffect(() => {
-          fetch('/api/movies/all')
+          fetch('/api/movies/allmovies')
             .then((data) => data.json())
             .then((res) => {
               setMovies(res);

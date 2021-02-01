@@ -24,7 +24,7 @@ function App() {
             <PrivateRoute exact path='/userhome' component={UserHome}/>
             <PrivateRoute exact path='/browse' component={Browse}/>
             <PrivateRoute exact path='/search' component={SearchPage}/>
-            <PrivateRoute exact path='/contact' component={ContactPage}/>
+            <Route exact path='/contact' component={ContactPage}/>
           </Switch>
         </BrowserRouter>
     </AppContextProvider>

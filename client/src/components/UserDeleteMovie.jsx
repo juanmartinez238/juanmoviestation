@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React from 'react';
-import swal from 'sweetalert';
+
 
 const IMG_API = "https://image.tmdb.org/t/p/w1280";
 

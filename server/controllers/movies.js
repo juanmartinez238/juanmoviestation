@@ -51,6 +51,30 @@ exports.getSpecificMovie = async (req, res) => {
 };
 
 // ***********************************************//
+// Get all tasks
+// /tasks?completed=true
+// /tasks?limit=10&skip=10
+// /tasks?sortBy=createdAt:asc
+// /tasks?sortBy=dueDate:desc
+// ***********************************************//
+exports.getAllMovies = async (req, res) => {
+    try {
+      await req.user
+        .populate({
+          path: 'movies',
+          options: {
+            limit: parseInt(req.query.limit),
+            skip: parseInt(req.query.skip),
+          },
+        })
+        .execPopulate();
+      res.json(req.user.movies);
+    } catch (e) {
+      res.status(500).json({ error: e.toString() });
+    }
+  };
+
+// ***********************************************//
 // Delete a movie
 // ***********************************************//
 exports.deleteMovie = async (req, res) => {

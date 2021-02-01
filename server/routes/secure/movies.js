@@ -4,10 +4,13 @@ const router = require('express').Router(),
     createMovie,
     getSpecificMovie,
     deleteMovie,
-    fetchAllMovies
+    fetchAllMovies,
+    getAllMovies
   } = require('../../controllers/movies');
 
 router.get('/all', fetchAllMovies);
+
+router.get('/allmovies', getAllMovies);
 
 router.post('/', createMovie);
 

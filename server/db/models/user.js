@@ -58,6 +58,14 @@ const userSchema = new mongoose.Schema(
   }
 );
 
+/**
+ * Create a virtual relation between User and movie.
+ */
+userSchema.virtual('movies', {
+  ref: 'Movie',
+  localField: '_id',
+  foreignField: 'owner',
+});
 
 /**
  * // By naming this instance method toJSON we don't

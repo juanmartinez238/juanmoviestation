@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React from 'react';
+import swal from 'sweetalert';
 
 const IMG_API = "https://image.tmdb.org/t/p/w1280";
 
@@ -16,8 +17,9 @@ const UserMovie = ({title, poster_path, overview, vote_average}) => {
                 overview: overview,
                 vote_average: vote_average
             })
+            swal('Movie Saved', 'You can now view this movie in your home page');
         }catch(err){
-            console.log(err);
+            swal('Oops', 'Something went wrong');
         }
     }
 

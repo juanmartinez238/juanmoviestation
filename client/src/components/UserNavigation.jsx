@@ -1,5 +1,6 @@
 import Container from 'react-bootstrap/esm/Container';
 import Nav from 'react-bootstrap/Nav';
+import Logout from '../components/Logout';
 
 
 const UserNavigation = () => {
@@ -17,6 +18,9 @@ const UserNavigation = () => {
           </Nav.Item>
           <Nav.Item>
             <Nav.Link href="/contact" eventKey="link-3">Contact Me</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Logout/>
           </Nav.Item>
         </Nav>
       </Container>

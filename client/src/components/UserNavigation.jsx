@@ -11,13 +11,13 @@ const UserNavigation = () => {
             <Nav.Link href="/userhome">Home</Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link href="/browse" eventKey="link-1">Featured</Nav.Link>
+            <Nav.Link href="/featured" eventKey="link-1">Featured</Nav.Link>
           </Nav.Item>
           <Nav.Item>
             <Nav.Link href="/search" eventKey="link-2">Search Movies</Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link href="/contact" eventKey="link-3">Contact Me</Nav.Link>
+            <Nav.Link href="/usercontact" eventKey="link-3">Contact Me</Nav.Link>
           </Nav.Item>
           <Nav.Item>
             <Logout/>

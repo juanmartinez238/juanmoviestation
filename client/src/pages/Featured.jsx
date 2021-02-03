@@ -4,7 +4,7 @@ import Main from '../components/Main';
 import UserNavigation from '../components/UserNavigation';
 
 
-const Browse = () => {
+const Featured = () => {
     return (
         <div className="body">
             <Main/>
@@ -14,4 +14,4 @@ const Browse = () => {
     )
 }
 
-export default Browse;
+export default Featured;

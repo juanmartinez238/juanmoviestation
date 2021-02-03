@@ -6,10 +6,11 @@ import CreateAccount from './pages/CreateAccount';
 import UserHome from './pages/UserHome';
 import { AppContextProvider } from '../src/context/AppContext';
 import PrivateRoute from './components/PrivateRoute';
-import Browse from './pages/Browse';
+import Featured from './pages/Featured';
 import SearchPage from './pages/SearchPage';
 import ContactPage from './pages/ContactPage';
 import ForgotPassword from './pages/ForgotPassword';
+import UserContactPage from './pages/UserContactPage';
 
 
 function App() {
@@ -22,9 +23,10 @@ function App() {
             <Route exact path='/createaccount' component={CreateAccount} />
             <Route exact path= '/forgotpassword' component= {ForgotPassword} />
             <PrivateRoute exact path='/userhome' component={UserHome}/>
-            <PrivateRoute exact path='/browse' component={Browse}/>
+            <PrivateRoute exact path='/featured' component={Featured}/>
             <PrivateRoute exact path='/search' component={SearchPage}/>
             <Route exact path='/contact' component={ContactPage}/>
+            <Route exact path='/usercontact' component={UserContactPage}/>
           </Switch>
         </BrowserRouter>
     </AppContextProvider>

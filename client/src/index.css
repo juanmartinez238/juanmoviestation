@@ -38,6 +38,11 @@ code {
   box-shadow: 0 0 8px 8px black;
 }
 
+.main-image {
+  position: relative;
+  max-width: 100%;
+}
+
 .image-title {
   background-color: black;
   color: white;

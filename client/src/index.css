@@ -76,6 +76,10 @@ code {
   outline: 0;
 }
 
+.search-container {
+  height: 100vh;
+}
+
 .search-form {
   padding: 2rem;
   display: flex;
@@ -195,22 +199,25 @@ header {
   padding: 3rem;
   display: flex;
   justify-content: center;
+  height: 100vh;
 }
 
 .contact-form {
   background-color: #49423f;
   border-radius: 20px;
   padding: 2rem;
+  margin: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 25vh;
 }
 
 .contact-h1 {
   color: white;
   display: flex;
   justify-content: center;
-  padding: 2rem;
+  margin-top: 5rem;
 }
 
 .contact-email-label {

@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# Movie Station
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Movie Station, allows users to create an account where they can then browse, search, and save their preferred movies.
 
-## Available Scripts
+- As a user, I can create an account on the Movie Station app using my email address and password.
+- As a user, I can log in and out of the Movie Station app.
+- As a user, I can reset my password, so that I can still have access to my saved movies.
+- As a user, I can update my password, so that I can change it to something that I can remember more easily after I reset my password.
+- As a user, I can save movies.
+- As a user, I am able to delete saved movies in home page of the Movie Station app
+- As a user, I can view all my saved movies in the home page.
 
-In the project directory, you can run:
+## Setup
 
-### `yarn start`
+- `git clone` this repo
+- `cd` into it.
+- `yarn install`
+- `cd client && yarn install`
+- `cp .env.sample .env`
+- `cd ..`
+- `cp .env.sample .env`
+- `populate variables within root .env file with your own data`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Available build commands
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- `yarn dev`: Runs BOTH your Express.JS and React developer environment locally at the same time. Any logs coming from Express will be prefaced with `[0]`, any logs from `create-react-app` will be prefaced with `[1]`.
+- `yarn server`: Runs JUST your Express.JS server.
+- `yarn client`: Runs JUST your front-end React app.
 
-### `yarn test`
+Open [http://localhost:3000](http://localhost:3000) to view your local React app in the browser. The page will reload if you make edits.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Movie Station Open Endpoints
 
-### `yarn build`
+| HTTP Verb | Path            | Description                                           |
+| --------- | --------------- | ----------------------------------------------------- |
+| POST      | `/api`          | CREATE a new user                                     |
+| POST      | `/api/login`    | CREATE a new session for a logged in user             |
+| GET       | `/api/password` | GET a new password using password reset functionality |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Movie Station Secure User Endpoints (only available to logged in users)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+| HTTP Verb | Path                    | Description                                                |
+| --------- | ----------------------- | ---------------------------------------------------------- |
+| GET       | `/api/users/me`         | VIEW information about currently logged in user            |
+| PATCH     | `/api/users/me`         | UPDATE information about currently logged in user          |
+| POST      | `/api/users/logout`     | END a user's session on the device they're currently using |
+| POST      | `/api/users/lougoutall` | END a user's session on all devices                        |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Movie Station Secure User (Movie) Endpoints (only available to a logged in user)
 
-### `yarn eject`
+| HTTP Verb | Path              | Description                               |
+| --------- | ----------------- | ----------------------------------------- | --- |
+| POST      | `/api/movies`     | ADD a new movie                           |
+| GET       | `/api/movies/all` | VIEW all of a user's saved movies         |
+| GET       | `/api/movies/:id` | VIEW a specific movie on a user's account |     |
+| DELETE    | `/api/movies/:id` | DELETE a user's movie                     |
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## To deploy
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+NOTE: Heroku specifically runs `npm start`, so don't remove that from your package.json file.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- `heroku create your-app-name`
+- `heroku config:set MONGODB_URL=<insertYourAtlasDbUri> SENDGRID_API_KEY=<yoursendgridapikey> FROM_EMAIL=<youremail> JWT_SECRET=<yoursecret>`
+- `git push heroku master`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## License
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[MIT](https://choosealicense.com/licenses/mit/)
